@@ -1,0 +1,101 @@
+ctrl + r 替换
+ctrl + f 查找
+ctrl + d 复制当前行到下一行
+ctrl + y 删除当前行
+Ctrl+P：查看方法参数
+Ctrl+Q：查看类、方法、属性注释
+ctrl + shift + 空格 与eclipse 中 alt+/
+Alt + Enter   引入类
+Alt + Insert    set/get; 构造方法;  toString; 重写方法。。。 
+Ctrl + O  查看我们继承的类或者接口中的方法，以及我们要实现的方法
+Ctrl+F12，可以显示当前文件的结构
+CTRL+SHILF+A，IDEA更换背景图片->Set Background Image
+ctrl+shift+alt+n  或者双击shift  (搜索类名和方法名)
+Ctrl+Alt+V:自动补全左侧语句
+ctrl+F12:查看该类的属性和方法
+Ctrl + D:复制当前行到下一行
+idea 查看类继承关系的快捷键
+ctrl+H：Date dNow = new Date( );
+      SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss");
+      SimpleDateFormat ft = new SimpleDateFormat ("YYYY-mm-dd hh:MM:SS");
+      System.out.println("当前时间为: " + ft.format(dNow));
+
+
+select TO_DATE('2021-5-19 16:01:20', 'YYYY-MM-DD hh24:mi:ss') from dual
+select TO_DATE('2021-5-19 16:01:20', 'YYYY-MM-DD HH24:mi:SS') from dual
+select TO_CHAR(SYSDATE, 'fm yyyy-mm-dd hh24:mi:ss') from dual
+TO_DATE大小写无所谓
+
+日期格式化字符串[%s]使用错误，应注意使用小写‘y’表示当天所在的年，大写‘Y’代表week in which year。 日期格式化时，yyyy表示当天所在的年，而大写的YYYY代表是week in which year（JDK7之后引入的概念），意思是当天所在的周属于的年份，一周从周日开始，周六结束，只要本周跨年，返回的YYYY就是下一年。
+            
+SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+注意:有的格式大写，有的格式小写，例如 MM 是月份，mm 是分；HH 是 24 小时制，而 hh 是 12 小时制
+
+Java总体命名规范
+1、项目名全部小写.
+2、包名全部小写.
+3、类名首字母大写,其余组成词首字母依次大写.
+4、变量名,方法名首字母小写,如果名称由多个单词组成,除首字母外的每个单词的首字母都要大写.
+5、常量名全部大写.
+6、所有命名规则必须遵循以下规则 :
+
+名称只能由字母、数字、下划线、$符号组成.
+不能以数字开头.
+名称不能使用Java中的关键字.
+坚决不允许出现中文及拼音命名.
+
+switch 没有内容default也不要省略
+switch (表达式) {
+		case 常量表达式或枚举常量:
+			语句;
+			break;
+		case 常量表达式或枚举常量:
+			语句;
+			break;
+		......
+		default: 语句;
+			break;
+	}
+
+调用Arrays.toString(a)，返回一个包含数组元素的字符串，这些元素被放置在括号内，并用逗号分开
+
+String 常用的方法
+equals
+equalsIgnoreCase()
+indexOf()
+toUpperCase();toLowerCase()
+length()
+split();
+trim();
+contains();
+replace();
+startsWith();endsWith()
+
+NPE （空指针异常)NullPointerException
+
+mvn exec:java -Dexec.mainClass="com.xxx.demo.HelloMaven"
+
+数组的3种定义方式：
+int [ ] arr = new int[5];
+arr[0]=1;
+int [ ] arr  = new int[ ]{1,3,5,7};
+int [ ] arr  = {1,3,5,7};
+
+Spring initializr 是Spring 官方提供的一个用来初始化一个Spring boot 项目的工具。
+
+查看oracle表空间数据文件位置
+select t1.name,t2.name from v$tablespace t1,v$datafile t2 where t1.ts# = t2.ts#;
+
+Oracle本机免密码登陆
+sqlplus/nolog
+conn /as sysdba
+查看Oracle数据库版本号
+select* from v$version;
+
+LayUI 导航菜单异常，无法展开或者无法折叠
+其中有过一个链接的href为空字符串。
+将其默认值设置如下值。
+a href="javascript:;"
+
+<li class="layui-nav-item     layui-nav-itemed">在li元素里去掉这个layui-nav-itemed的属性就可以做到刷新的时候不展开，想默认展开哪一个，加上这个属性就可以了
